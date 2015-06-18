@@ -10,20 +10,22 @@
 
 	<header>
 		<div class="col-xs-3">
-			<div class="circle">
-			  <br />
-			  You Know
-			  <br />
-			  You Need To
-			  <br />
-			  Workout...
-			</div>
+			<%= link_to root_path, :class => 'logo' do %>
+				<div class="circle">
+				  <br />
+				  You Know
+				  <br />
+				  You Need To
+				  <br />
+				  Workout...
+				</div>
+			<% end %>
 		</div>
 		<div class="col-xs-4 slogan">
 			Splurting out unsolicited advice about working out since 2015
 		</div>
 		<div class="col-xs-5 links">
-			<%= link_to 'Contribute', '#' %>
+			<%= link_to 'Contribute', new_quote_path %>
 			<%= link_to 'About', '#' %>
 		</div>
 	</header>
@@ -39,7 +41,7 @@
 <div class="footer">
 	<div class="container">
 		<div class="col-xs-4">
-			This isn't enough, <%= link_to "I want more!", "#", :class => 'next-quote' %>
+			This isn't enough, <%= link_to "I want more!", root_path, :class => 'next-quote' %>
 		</div>
 		
 		<div class="footer-blurb">
