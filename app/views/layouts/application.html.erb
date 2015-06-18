@@ -21,10 +21,10 @@
 				</div>
 			<% end %>
 		</div>
-		<div class="col-xs-4 slogan">
+		<div class="col-xs-4 hidden-xs slogan">
 			Splurting out unsolicited advice about working out since 2015
 		</div>
-		<div class="col-xs-5 links">
+		<div class="col-xs-8 col-xs-offset-1 col-sm-offset-0 col-sm-5 links">
 			<!-- Button trigger modal -->
 			<%= link_to 'Contribute', "#", :data => {:toggle => 'modal', :target => '#myModal'} %>
 			<%= link_to 'About', about_path %>
@@ -45,12 +45,13 @@
 	      </div>
 	      <div class="modal-body">
 	        <%= simple_form_for Quote.new do |f| %>
-				<%= f.input :saying %>
-				<%= f.input :author %>
+				<%= f.input :saying, :label => "What is the saying you want to add?", :placeholder => "Life is like a box of chocolates." %>
+				<br />
+				<%= f.input :author, :label => "Who is the author of this quote?", :placeholder => "Forrest Gump" %>
 				<br />
 				<div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<%= f.submit 'Create', :class => 'btn btn-danger' %>
+					<%= f.submit 'Add Quote', :class => 'btn btn-danger' %>
 			      </div>
 			<% end %>
 	      </div>
@@ -76,15 +77,14 @@
 
 <div class="footer">
 	<div class="container">
-		<div class="col-xs-4">
+		<div class="col-xs-12 col-sm-4">
 			This isn't enough, <%= link_to "I want more!", root_path, :class => 'next-quote' %>
 		</div>
-		
 		<div class="footer-blurb">
-			<div class="col-xs-4">
-				Hacked in Los Angeles by <a href="#">Myo T Kyaw</a><br />
+			<div class="col-xs-12 col-sm-4">
+				Hacked in Los Angeles by <a target="_blank" href="https://github.com/mkyaw">Myo T Kyaw</a><br />
 			</div>
-			<div class="col-xs-4">
+			<div class="col-xs-12 col-sm-4">
 				Build your own <a target="_blank" href="http://thefirehoseproject.com">here</a>.
 			</div>
 		</div>

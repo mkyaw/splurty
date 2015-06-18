@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
 .clear {
 	clear:both;
@@ -82,18 +82,40 @@ h2 {
     font-size: 17px;
 }
 
+@media (max-width: 750px) {
+    .footer {
+        text-align: center;
+    }
+}
+
 .logo:hover {
     text-decoration:none;
 }
 
+h1 span {
+    color: #615F66;
+}
+
 .h1static {
     //text-align: center;
-    font-size: 60px;
+    font-size: 40px;
     color:#ed2151;
+}
+
+.h1dynamic {
+    font-size: 60px;
 }
 
 .about {
     font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 
     font-size: 17px;
+}
+
+.modal {
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
+::selection {
+  background-color: #f84342;
 }
